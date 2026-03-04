@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import './styles.css'
 
 const GithubIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+  <img src="/icons/github.svg" width="30" alt="GitHub" />
 )
 const LinkedinIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -26,33 +26,30 @@ const FlameIcon = () => (
 )
 
 const skills = [
-  { label: 'JavaScript', icon: 'JS',  color: '#F7DF1E', bg: '#2a2700' },
-  { label: 'TypeScript', icon: 'TS',  color: '#3178C6', bg: '#0d1f3c' },
-  { label: 'Python',     icon: 'PY',  color: '#3776AB', bg: '#0d1e2e' },
-  { label: 'PHP',        icon: 'PHP', color: '#777BB4', bg: '#1a1a2e' },
-  { label: 'C++',        icon: 'C++', color: '#00599C', bg: '#001a2e' },
-  { label: 'C#',         icon: 'C#',  color: '#239120', bg: '#0a1f0a' },
-  { label: 'React',      icon: '⚛',  color: '#61DAFB', bg: '#0d2a30' },
-  { label: 'Next.js',    icon: 'N',   color: '#ffffff', bg: '#1a1a1a' },
-  { label: 'Docker',     icon: '🐳',  color: '#2496ED', bg: '#0d1e30' },
-  { label: 'Redis',      icon: '⬡',  color: '#DC382D', bg: '#2a0d0d' },
-  { label: 'Postgres',   icon: '🐘',  color: '#336791', bg: '#0d1a25' },
-  { label: 'SQL',        icon: 'SQL', color: '#CC2927', bg: '#2a0d0d' },
-  { label: 'Django',     icon: 'DJ',  color: '#44B78B', bg: '#0a1f15' },
-  { label: 'Flask',      icon: 'FL',  color: '#cccccc', bg: '#1a1a1a' },
-  { label: 'Git',        icon: 'GIT', color: '#F05032', bg: '#2a1208' },
-  { label: 'GH Actions', icon: 'GA',  color: '#2088FF', bg: '#0d1a30' },
-  { label: 'Bash',       icon: '$_',  color: '#4EAA25', bg: '#0a1f0a' },
-  { label: 'Linux',      icon: '🐧',  color: '#FCC624', bg: '#2a2200' },
-  { label: 'Node.js',    icon: 'N',   color: '#339933', bg: '#0a1f0a' },
-  { label: 'Express',    icon: 'EX',  color: '#cccccc', bg: '#1a1a1a' },
-  { label: 'Laravel',    icon: 'LV',  color: '#FF2D20', bg: '#2a0d0d' },
-  { label: 'MongoDB',    icon: 'MDB', color: '#47A248', bg: '#0a1f0a' },
-  { label: 'Vim',        icon: 'VIM', color: '#019733', bg: '#0a1f0a' },
-  { label: 'Figma',      icon: 'FIG', color: '#F24E1E', bg: '#2a1208' },
-  { label: 'JWT',        icon: 'JWT', color: '#D63AFF', bg: '#1e0a2a' },
-  { label: 'Groq SDK',   icon: 'GQ',  color: '#FF6E6E', bg: '#2a0d0d' },
-  { label: 'CSS',        icon: 'CSS', color: '#1572B6', bg: '#0d1e30' },
+  { label: 'JavaScript', icon: '/icons/js.png', color: '#F7DF1E', bg: '#2a2700' },
+  { label: 'TypeScript', icon: '/icons/typescript.png', color: '#3178C6', bg: '#0d1f3c' },
+  { label: 'Python',     icon: '/icons/python.png', color: '#3776AB', bg: '#0d1e2e' },
+  { label: 'PHP',        icon: '/icons/php.png', color: '#777BB4', bg: '#1a1a2e' },
+  { label: 'C++',        icon: '/icons/c-.png', color: '#00599C', bg: '#001a2e' },
+  { label: 'C#',         icon: '/icons/c-sharp.png', color: '#239120', bg: '#0a1f0a' },
+  { label: 'React',      icon: '/icons/react.png', color: '#61DAFB', bg: '#0d2a30' },
+  { label: 'Next.js',    icon: '/icons/next.svg', color: '#ffffff', bg: '#1a1a1a' },
+  { label: 'Docker',     icon: '/icons/docker.png', color: '#2496ED', bg: '#0d1e30' },
+  { label: 'Redis',      icon: '/icons/redis.png', color: '#DC382D', bg: '#2a0d0d' },
+  { label: 'Postgres',   icon: '/icons/postgres.png', color: '#336791', bg: '#0d1a25' },
+  { label: 'MySQL',      icon: '/icons/mysql.png', color: '#CC2927', bg: '#2a0d0d' },
+  { label: 'Django',     icon: '/icons/django.png', color: '#44B78B', bg: '#0a1f15' },
+  { label: 'Flask',      icon: '/icons/Flask.png', color: '#cccccc', bg: '#1a1a1a' },
+  { label: 'Git',        icon: '/icons/Git.png', color: '#F05032', bg: '#2a1208' },
+  { label: 'GH Actions', icon: '/icons/github-actions.png', color: '#2088FF', bg: '#0d1a30' },
+  { label: 'Bash',       icon: '/icons/Bash.png', color: '#4EAA25', bg: '#0a1f0a' },
+  { label: 'Linux',      icon: '/icons/Linux.png', color: '#FCC624', bg: '#2a2200' },
+  { label: 'Node.js',    icon: '/icons/Node.js.png', color: '#339933', bg: '#0a1f0a' },
+  { label: 'Express',    icon: '/icons/Express.png', color: '#cccccc', bg: '#1a1a1a' },
+  { label: 'Laravel',    icon: '/icons/Laravel.png', color: '#FF2D20', bg: '#2a0d0d' },
+  { label: 'MongoDB',    icon: '/icons/MongoDB.png', color: '#47A248', bg: '#0a1f0a' },
+  { label: 'Vim',        icon: '/icons/Vim.png', color: '#019733', bg: '#0a1f0a' },
+  { label: 'Figma',      icon: '/icons/Figma.png', color: '#019733', bg: '#0a1f0a' },
 ]
 
 const projects = [
@@ -236,7 +233,9 @@ export default function Home() {
             <div className="skills-grid">
               {skills.map(s => (
                 <div key={s.label} className="skill-card">
-                  <div className="skill-icon" style={{ background: s.bg, color: s.color }}>{s.icon}</div>
+                  <div className="skill-icon" style={{ background: s.bg }}>
+                    <img src={s.icon} alt={s.label} width={32} height={32} style={{ objectFit: 'contain' }} />
+                  </div>
                   <span className="skill-label">{s.label}</span>
                 </div>
               ))}
