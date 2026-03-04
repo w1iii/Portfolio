@@ -55,6 +55,7 @@ const skills = [
 const projects = [
   {
     name: 'Pivot', color: '#FAC4C4',
+    image: '/pivot.png',
     description: 'A personal stock tracking dashboard with AI-powered analysis. Built to help investors monitor their portfolios with real-time data and intelligent insights.',
     features: [
       'User Authentication — Secure signup and login with JWT-based authentication',
@@ -72,6 +73,7 @@ const projects = [
   },
   {
     name: 'Campus Connect', color: '#FA9A9A',
+    image: '/campus-connect.png',
     description: 'A campus community platform connecting students, faculty, and staff. Enables real-time communication, event discovery, and resource sharing across departments.',
     features: [
       'User Profiles — Personalized profiles for students and faculty',
@@ -88,29 +90,27 @@ const projects = [
   },
   {
     name: 'The Chef', color: '#FF6E6E',
+    image: '/thechef.png',
     description: 'An AI-powered recipe and meal planning app. Tell it what ingredients you have, and it generates recipes, nutritional info, and a full weekly meal plan.',
     features: [
       'Ingredient-based Recipe Generation — AI suggests recipes from available items',
-      'Meal Planner — Auto-generate weekly meal schedules',
-      'Nutrition Tracker — View calorie and macro info per recipe',
-      'Favorites & History — Save your favorite generated recipes',
-      'Shopping List — Auto-generate grocery lists from your meal plan',
+      "AI-generated recipes using Groq's Llama model",
+      'Instant recipe suggestions with title, ingredients list, and step-by-step instructions',
     ],
     tech: [
-      { label: 'Python', color: '#3776AB' }, { label: 'Flask', color: '#cccccc' },
-      { label: 'Postgres', color: '#336791' }, { label: 'Groq SDK', color: '#FF6E6E' },
-      { label: 'Docker', color: '#2496ED' }, { label: 'React', color: '#61DAFB' },
+      { label: 'React', color: '#61DAFB' }, { label: 'Node.js', color: '#339933' },
+      { label: 'Javascript', color: '#F7DF1E' } 
     ],
   },
   {
     name: 'Thrifty', color: '#FD3E3E',
-    description: 'A personal finance tracker designed for everyday budgeting. Track expenses, set savings goals, and get monthly spending reports — all in one clean dashboard.',
+    image: '/thrifty.png',
+    description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
     features: [
-      'Expense Logging — Quickly log daily expenses by category',
-      'Budget Goals — Set monthly limits per category and track progress',
-      'Spending Reports — Visual breakdowns of spending habits',
-      'Savings Tracker — Monitor savings goals with progress indicators',
-      'Data Export — Export your financial data as CSV',
+      'Tinder-style card interface with drag gestures',
+      'Swipe right to save (like), left to skip (pass)',
+      'Protected routes with middleware verification',
+      'Touch and mouse support for swiping',
     ],
     tech: [
       { label: 'Next.js', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
@@ -277,6 +277,8 @@ export default function Home() {
                       <div className="panel-dot" style={{ background: activeProject.color, boxShadow: `0 0 10px ${activeProject.color}70` }} />
                       <h3 className="panel-name">{activeProject.name}</h3>
                     </div>
+                    {activeProject.image && <img src={activeProject.image} width="400" alt={activeProject.name} />}
+                    
                     <p className="panel-desc">{activeProject.description}</p>
                     <div>
                       <p className="panel-section-label">Features</p>
