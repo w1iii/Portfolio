@@ -73,14 +73,13 @@ const projects = [
   },
   {
     name: 'Campus Connect', color: '#FA9A9A',
-    image: '/campus-connect.png',
+    image: '/campusconnect.png',
     description: 'A campus community platform connecting students, faculty, and staff. Enables real-time communication, event discovery, and resource sharing across departments.',
     features: [
-      'User Profiles — Personalized profiles for students and faculty',
-      'Event Board — Browse and RSVP to campus events',
-      'Discussion Forums — Department-specific boards for academic discussion',
-      'Resource Hub — Shared documents, schedules, and announcements',
-      'Real-time Notifications — Stay updated with instant alerts',
+      'Real-time messaging with Socket.io',
+      'Automatic partner matching with cross-school preference',
+      'Reconnection handling',
+      'Partner disconnection detection',
     ],
     tech: [
       { label: 'React', color: '#61DAFB' }, { label: 'Node.js', color: '#339933' },
@@ -168,19 +167,13 @@ export default function Home() {
 
           <div className="avatar-wrapper">
             <div className="avatar-pattern" />
-            <span className="avatar-initials">LFL</span>
+            <img src="/profile.jpg" width="140%" />
           </div>
 
           <p className="card-name">Lui Franz A.<br />Lomugdang</p>
 
           <div className="flame-badge">
             <FlameIcon />
-          </div>
-
-          <div className="card-connector">
-            <div className="connector-dot" />
-            <div className="connector-dot" />
-            <div className="connector-dot" />
           </div>
 
           <p className="card-bio">
