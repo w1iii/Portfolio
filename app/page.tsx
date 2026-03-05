@@ -138,6 +138,31 @@ export default function Home() {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
   const lastScrollY = useRef(0)
   const animatedSections = useRef<Set<string>>(new Set())
+  const [formData, setFormData] = useState({ name: '', email: '', budget: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    try {
+      const res = await fetch('/api/submitform', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', budget: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch {
+      setSubmitStatus('error')
+    }
+    setIsSubmitting(false)
+  }
 
   useEffect(() => {
     setIsLoaded(true)
@@ -348,21 +373,39 @@ export default function Home() {
           <section ref={setRef('contact')} id="contact" className="scroll-animate" style={{ paddingBottom: 48 }}>
             <p className="section-label">Contact</p>
             <h2 className="section-title-form">LET&apos;S WORK <span style={{ color: '#FF6E6E' }}>TOGETHER</span></h2>
-            <div className="contact-form" style={{ marginTop: 32 }}>
+            <form className="contact-form" style={{ marginTop: 32 }} onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Name</label>
-                  <input type="text" className="form-input" placeholder="Your Name" />
+                  <input 
+                    type="text" 
+                    className="form-input" 
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
                 </div>
                 <div className="form-group">
                   <label className="form-label">Email</label>
-                  <input type="email" className="form-input" placeholder="your@email.com" />
+                  <input 
+                    type="email" 
+                    className="form-input" 
+                    placeholder="your@email.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
                 </div>
               </div>
               <div className="form-group">
                 <label className="form-label">Budget</label>
                 <div className="form-select-wrap">
-                  <select className="form-select">
+                  <select 
+                    className="form-select"
+                    value={formData.budget}
+                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                  >
                     <option value="" disabled>Select...</option>
                     <option>Less than $1,000</option>
                     <option>$1,000 – $5,000</option>
@@ -375,10 +418,29 @@ export default function Home() {
               </div>
               <div className="form-group">
                 <label className="form-label">Message</label>
-                <textarea className="form-textarea" placeholder="Message" rows={5} />
+                <textarea 
+                  className="form-textarea" 
+                  placeholder="Message" 
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                />
               </div>
-              <button className="submit-btn">Submit</button>
-            </div>
+              <button 
+                className="submit-btn" 
+                disabled={isSubmitting}
+                style={{ opacity: isSubmitting ? 0.7 : 1 }}
+              >
+                {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Submit'}
+              </button>
+              {submitStatus === 'success' && (
+                <p style={{ color: '#4CAF50', marginTop: 8 }}>Thanks! I'll get back to you soon.</p>
+              )}
+              {submitStatus === 'error' && (
+                <p style={{ color: '#FF6E6E', marginTop: 8 }}>Something went wrong. Please try again.</p>
+              )}
+            </form>
           </section>
 
         </div>
