@@ -55,6 +55,7 @@ const skills = [
 const projects = [
   {
     name: 'Pivot', color: '#FAC4C4',
+    link: 'https://github.com/w1iii/Pivot',
     image: '/pivot.png',
     description: 'A personal stock tracking dashboard with AI-powered analysis. Built to help investors monitor their portfolios with real-time data and intelligent insights.',
     features: [
@@ -73,6 +74,7 @@ const projects = [
   },
   {
     name: 'Campus Connect', color: '#FA9A9A',
+    link: 'https://github.com/w1iii/campusconnect',
     image: '/campusconnect.png',
     description: 'A campus community platform connecting students, faculty, and staff. Enables real-time communication, event discovery, and resource sharing across departments.',
     features: [
@@ -89,6 +91,7 @@ const projects = [
   },
   {
     name: 'The Chef', color: '#FF6E6E',
+    link: 'https://github.com/w1iii/TheChef',
     image: '/thechef.png',
     description: 'An AI-powered recipe and meal planning app. Tell it what ingredients you have, and it generates recipes, nutritional info, and a full weekly meal plan.',
     features: [
@@ -103,6 +106,7 @@ const projects = [
   },
   {
     name: 'Thrifty', color: '#FD3E3E',
+    link: 'https://github.com/w1iii/thrifty',
     image: '/thrifty.png',
     description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
     features: [
@@ -307,6 +311,7 @@ export default function Home() {
                       <div className="panel-dot" style={{ background: activeProject.color, boxShadow: `0 0 10px ${activeProject.color}70` }} />
                       <h3 className="panel-name">{activeProject.name}</h3>
                     </div>
+                    <a href={activeProject.link} target="_blank" className="project-link">{activeProject.link}</a>
                     {activeProject.image && <img src={activeProject.image} width="400" alt={activeProject.name} />}
                     
                     <p className="panel-desc">{activeProject.description}</p>

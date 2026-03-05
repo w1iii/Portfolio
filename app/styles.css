@@ -331,6 +331,19 @@ body {
 }
 
 /* ── PROJECTS ─────────────────────────────────────────────────────────────── */
+.project-link{
+  text-decoration:none;
+  color:#FF6E6E;
+  font-size:13px;
+  transition:0.3s;
+  font-weight:600;
+}
+.project-link:hover{
+  text-decoration:none;
+  color: #FD3E3E;
+  font-size:13.5px;
+  transition:0.3s;
+}
 .projects-layout { display: flex; gap: 20px; min-height: 440px; }
 .projects-list { display: flex; flex-direction: column; gap: 8px; width: 200px; flex-shrink: 0; }
 .project-btn {
