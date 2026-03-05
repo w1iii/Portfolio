@@ -129,7 +129,25 @@ const navItems = [
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about')
   const [openProject, setOpenProject] = useState<string | null>('Pivot')
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down')
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
+  const lastScrollY = useRef(0)
+  const animatedSections = useRef<Set<string>>(new Set())
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setScrollDirection(currentScrollY > lastScrollY.current ? 'down' : 'up')
+      lastScrollY.current = currentScrollY
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []
@@ -146,6 +164,25 @@ export default function Home() {
     return () => observers.forEach(o => o.disconnect())
   }, [])
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+
+    document.querySelectorAll('.scroll-animate').forEach((el) => {
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [isLoaded])
+
   const scrollTo = (id: string) => {
     sectionRefs.current[id]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -160,10 +197,10 @@ export default function Home() {
     <div className="portfolio-layout">
 
       {/* SIDEBAR */}
-      <aside className="sidebar">
+      <aside className={`sidebar ${isLoaded ? 'page-load-1' : ''}`}>
 
         {/* White profile card */}
-        <div className="profile-card">
+        <div className={`profile-card ${isLoaded ? 'page-load-card' : ''}`}>
 
           <div className="avatar-wrapper">
             <div className="avatar-pattern" />
@@ -189,7 +226,7 @@ export default function Home() {
         </div>
 
         {/* Nav below card */}
-        <nav className="sidebar-nav">
+        <nav className={`sidebar-nav ${isLoaded ? 'page-load-3' : ''}`}>
           {navItems.map(({ id, label }) => (
             <button
               key={id}
@@ -208,7 +245,7 @@ export default function Home() {
       <main className="main-content">
         <div className="content-inner">
 
-          <section ref={setRef('about')} id="about" className="fade-in-up">
+          <section ref={setRef('about')} id="about" className={`scroll-animate ${scrollDirection === 'down' ? 'from-bottom' : 'from-top'} ${isLoaded ? 'page-load-2' : ''}`}>
             <p className="section-label">Who I Am</p>
             <h2 className="about-heading">SOFTWARE<br /><span className="accent">DEVELOPER</span></h2>
             <p className="about-body">
@@ -219,7 +256,7 @@ export default function Home() {
             </p>
           </section>
 
-          <section ref={setRef('skills')} id="skills">
+          <section ref={setRef('skills')} id="skills" className={`scroll-animate ${isLoaded ? 'page-load-3' : ''}`}>
             <p className="section-label">Expertise</p>
             <h2 className="section-title">TECHNICAL SKILLS</h2>
             <p className="section-sub">A curated selection of my expertise</p>
@@ -235,7 +272,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section ref={setRef('projects')} id="projects">
+          <section ref={setRef('projects')} id="projects" className="scroll-animate">
             <p className="section-label">Work</p>
             <h2 className="section-title">RECENT PROJECTS</h2>
             <p className="section-sub">
@@ -303,7 +340,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section ref={setRef('contact')} id="contact" style={{ paddingBottom: 48 }}>
+          <section ref={setRef('contact')} id="contact" className="scroll-animate" style={{ paddingBottom: 48 }}>
             <p className="section-label">Contact</p>
             <h2 className="section-title-form">LET&apos;S WORK <span style={{ color: '#FF6E6E' }}>TOGETHER</span></h2>
             <div className="contact-form" style={{ marginTop: 32 }}>
