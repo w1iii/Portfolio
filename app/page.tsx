@@ -120,7 +120,24 @@ const projects = [
       { label: 'Postgres', color: '#336791' }, { label: 'Prisma', color: '#5A67D8' },
       { label: 'Docker', color: '#2496ED' }, { label: 'Laravel', color: '#FF2D20' },
     ],
+  },{
+    name: 'DevTalk', color: '#FD3E3E',
+    link: 'https://github.com/w1iii/Developer-Knowledge-Hub',
+    image: '/thrifty.png',
+    description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
+    features: [
+      'Tinder-style card interface with drag gestures',
+      'Swipe right to save (like), left to skip (pass)',
+      'Protected routes with middleware verification',
+      'Touch and mouse support for swiping',
+    ],
+    tech: [
+      { label: 'Next.js', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
+      { label: 'Postgres', color: '#336791' }, { label: 'Prisma', color: '#5A67D8' },
+      { label: 'Docker', color: '#2496ED' }, { label: 'Laravel', color: '#FF2D20' },
+    ],
   },
+
 ]
 
 const navItems = [
