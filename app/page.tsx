@@ -33,24 +33,41 @@ const skills = [
   { label: 'C++',        icon: '/icons/c-.png', color: '#00599C', bg: '#001a2e' },
   { label: 'C#',         icon: '/icons/c-sharp.png', color: '#239120', bg: '#0a1f0a' },
   { label: 'React',      icon: '/icons/react.png', color: '#61DAFB', bg: '#0d2a30' },
-  { label: 'Next.js',    icon: '/icons/next.svg', color: '#ffffff', bg: '#1a1a1a' },
+  { label: 'Next.js',    icon: '/icons/next.svg', color: '#ffffff', bg: 'white' },
   { label: 'Docker',     icon: '/icons/docker.png', color: '#2496ED', bg: '#0d1e30' },
   { label: 'Redis',      icon: '/icons/redis.png', color: '#DC382D', bg: '#2a0d0d' },
   { label: 'Postgres',   icon: '/icons/postgres.png', color: '#336791', bg: '#0d1a25' },
   { label: 'MySQL',      icon: '/icons/mysql.png', color: '#CC2927', bg: '#2a0d0d' },
-  { label: 'Django',     icon: '/icons/django.png', color: '#44B78B', bg: '#0a1f15' },
-  { label: 'Flask',      icon: '/icons/Flask.png', color: '#cccccc', bg: '#1a1a1a' },
+  { label: 'Django',     icon: '/icons/django.png', color: '#44B78B', bg: 'white' },
+  { label: 'Flask',      icon: '/icons/Flask.png', color: '#cccccc', bg: 'white' },
   { label: 'Git',        icon: '/icons/Git.png', color: '#F05032', bg: '#2a1208' },
   { label: 'GH Actions', icon: '/icons/github-actions.png', color: '#2088FF', bg: '#0d1a30' },
-  { label: 'Bash',       icon: '/icons/Bash.png', color: '#4EAA25', bg: '#0a1f0a' },
+  { label: 'Bash',       icon: '/icons/Bash.png', color: '#4EAA25', bg: 'white' },
   { label: 'Linux',      icon: '/icons/Linux.png', color: '#FCC624', bg: '#2a2200' },
   { label: 'Node.js',    icon: '/icons/Node.js.png', color: '#339933', bg: '#0a1f0a' },
-  { label: 'Express',    icon: '/icons/Express.png', color: '#cccccc', bg: '#1a1a1a' },
+  { label: 'Express',    icon: '/icons/Express.png', color: '#cccccc', bg: 'white' },
   { label: 'Laravel',    icon: '/icons/Laravel.png', color: '#FF2D20', bg: '#2a0d0d' },
   { label: 'MongoDB',    icon: '/icons/MongoDB.png', color: '#47A248', bg: '#0a1f0a' },
   { label: 'Vim',        icon: '/icons/Vim.png', color: '#019733', bg: '#0a1f0a' },
   { label: 'Figma',      icon: '/icons/Figma.png', color: '#019733', bg: '#0a1f0a' },
+  { label: 'Vercel',     icon:'/icons/vercel-logo.svg', bg: '#ffffff' },
+  { label: 'Render',    icon: '/icons/render.jpeg', bg: 'black' },
+  { label: 'Google Gemini API', icon: '/icons/Google.png', bg: '#0d1a30' },
+  { label: 'System Design', icon: '/icons/sd.png', color: 'black', bg: '#2a1208' },
+  { label: 'Vite.js', icon:'/icons/vite.png', bg: '#0d1a30' },
+  { label: 'Apache', icon:'/icons/Apache.png', bg: '#2a0d0d' },
 ]
+
+const recentWin = {
+  title: 'Omniversal AI',
+  type: 'hackathon',
+  award: 'MLH Best Use of ElevenLabs',
+  event: 'AI Hackfest',
+  date: 'April 2026',
+  description: 'A high-performance, dark-aesthetic cognitive processing engine with real-time voice synthesis. Built with Next.js 16, Gemini 2.5 Flash, and ElevenLabs.',
+  link: 'https://devpost.com/software/omniversal-ai',
+  builtBy: 'Lui Franz Lomugdang, Pujan Bade & Rishabh Kataria',
+}
 
 const projects = [
   {
@@ -73,7 +90,7 @@ const projects = [
     ],
   },
   {
-    name: 'Campus Connect', color: '#FA9A9A',
+    name: 'Campus Connect', color: '#E88888',
     link: 'https://github.com/w1iii/campusconnect',
     image: '/campusconnect.png',
     description: 'A campus community platform connecting students, faculty, and staff. Enables real-time communication, event discovery, and resource sharing across departments.',
@@ -90,7 +107,7 @@ const projects = [
     ],
   },
   {
-    name: 'The Chef', color: '#FF6E6E',
+    name: 'The Chef', color: '#D66666',
     link: 'https://github.com/w1iii/TheChef',
     image: '/thechef.png',
     description: 'An AI-powered recipe and meal planning app. Tell it what ingredients you have, and it generates recipes, nutritional info, and a full weekly meal plan.',
@@ -105,7 +122,7 @@ const projects = [
     ],
   },
   {
-    name: 'Thrifty', color: '#FD3E3E',
+    name: 'Thrifty', color: '#C44444',
     link: 'https://github.com/w1iii/thrifty',
     image: '/thrifty.png',
     description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
@@ -121,7 +138,7 @@ const projects = [
       { label: 'Docker', color: '#2496ED' }, { label: 'Laravel', color: '#FF2D20' },
     ],
   },{
-    name: 'DevTalk', color: '#FD3E3E',
+    name: 'DevTalk', color: '#B22222',
     link: 'https://github.com/w1iii/Developer-Knowledge-Hub',
     image: '/devtalk.png',
     description: '  Stack Overflow-inspired Q&A platform for developers to learn, ask questions, and share knowledge.', 
@@ -141,7 +158,7 @@ const projects = [
       { label: 'Docker', color: '#2496ED' }, { label: 'JWT (jose library)', color: '#FF2D20' },
     ],
   },{
-    name: 'Student Grade Management System', color: '#FD3E3E',
+    name: 'Student Grade Management System', color: '#A01E1E',
     link: 'https://github.com/w1iii/Student-Grade-Management-System',
     image: '/sgms.png',
     description: 'A desktop application for managing and tracking student grades across multiple grade levels. Built with Electron, React, and TypeScript.', 
@@ -160,7 +177,7 @@ const projects = [
       { label: 'xlsx', color: '#339933' }
     ],
   },{
-    name: 'Local Automation Engine', color: '#FD3E3E',
+    name: 'Local Automation Engine', color: '#8E1A1A',
     link: 'https://github.com/w1iii/Local-Automation-Engine',
     image: '/file_organizer_thumbnail.svg',
     description: 'A Python CLI tool that automatically organizes files by moving them to designated folders based on file extension rules.', 
@@ -179,7 +196,7 @@ const projects = [
       { label: 'watchdog', color: '#FD3E3E' }, { label: 'pathlib', color: '#ffffff' },
     ],
   },{
-    name: 'Akawnt', color: '#FD3E3E',
+    name: 'Akawnt', color: '#7C1616',
     link: 'https://github.com/w1iii/akawnt',
     image: '/akawnt.png',
     description: 'Akawnt is a web-based job application and administration management system built for the Akawnt accounting firm. It provides a complete workflow for managing job applications - from initial submission through hiring - with separate portals for job applicants and administrators.', 
@@ -201,7 +218,7 @@ const projects = [
       { label: 'dompdf', color: '#DC382D' }, { label: 'Larvel sanctum', color: '#FD3E3E' },
     ],
   },{
-    name: 'Omniversal AI', color: '#FD3E3E',
+    name: 'Omniversal AI', color: '#6A1212',
     link: 'https://omniversal-ai.vercel.app', 
     image: '/Omni.png',
     description: 'Omniversal AI is a high-performance, dark-aesthetic cognitive processing engine designed for the next generation of AI-native applications. Built with Next.js 16 (App Router) and powered by Google Gemini 2.5 Flash, it provides a seamless, stateful chat experience with real-time neural visualization.',
@@ -396,6 +413,21 @@ export default function Home() {
                   <span className="skill-label">{s.label}</span>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section className={`recent-win-section ${isLoaded ? 'page-load-4' : ''}`}>
+            <div className="win-badge">{recentWin.type.toUpperCase()} WIN</div>
+            <div className="win-content">
+              <div className="win-header">
+                <span className="win-event">{recentWin.event}</span>
+                <span className="win-date">{recentWin.date}</span>
+              </div>
+              <h2 className="win-title">{recentWin.title}</h2>
+              <p className="win-desc">{recentWin.description}</p>
+              <p className="win-award">★ {recentWin.award}</p>
+              <p className="win-creators">Built by {recentWin.builtBy}</p>
+              <a href={recentWin.link} target="_blank" className="win-link">View on Devpost →</a>
             </div>
           </section>
 

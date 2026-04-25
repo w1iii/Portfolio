@@ -311,6 +311,122 @@ body {
   transition: color 0.25s ease;
 }
 
+/* ── RECENT WIN ─────────────────────────────────────────────────────────────── */
+.recent-win-section {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid #2a2a2a;
+  border-left: 4px solid #FD3E3E;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeSlideIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.recent-win-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(253,62,62,0.03));
+  pointer-events: none;
+}
+
+.win-badge {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: #FD3E3E;
+  color: #000;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.win-content {
+  flex: 1;
+}
+
+.win-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.win-event {
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.win-date {
+  color: #666;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.win-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.win-desc {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 12px;
+}
+
+.win-award {
+  color: #FFD700;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.win-creators {
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.win-link {
+  color: #FF6E6E;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.win-link:hover {
+  color: #FD3E3E;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ── PROJECTS ─────────────────────────────────────────────────────────────── */
 .project-link{
   text-decoration:none;
