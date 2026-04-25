@@ -123,21 +123,102 @@ const projects = [
   },{
     name: 'DevTalk', color: '#FD3E3E',
     link: 'https://github.com/w1iii/Developer-Knowledge-Hub',
-    image: '/thrifty.png',
-    description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
+    image: '/devtalk.png',
+    description: '  Stack Overflow-inspired Q&A platform for developers to learn, ask questions, and share knowledge.', 
     features: [
-      'Tinder-style card interface with drag gestures',
-      'Swipe right to save (like), left to skip (pass)',
-      'Protected routes with middleware verification',
-      'Touch and mouse support for swiping',
+      'Authentication - JWT-based user registration and login with secure cookie handling',
+      'Questions - Post, edit, delete, and view developer questions',
+      'Tags - Categorize questions with technology tags (JavaScript, Python, React, etc.)',
+      'Voting System - Upvote/downvote questions and answers',
+      'Answers - Add, edit, and delete answers to questions',
+      'Search - Real-time search through questions',
+      'View Tracking - Track unique question views per user',
+      'Dashboard - Personalized dashboard for authenticated users',
     ],
     tech: [
       { label: 'Next.js', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
-      { label: 'Postgres', color: '#336791' }, { label: 'Prisma', color: '#5A67D8' },
-      { label: 'Docker', color: '#2496ED' }, { label: 'Laravel', color: '#FF2D20' },
+      { label: 'Postgres', color: '#336791' }, { label: 'Next.js API routes', color: '#5A67D8' },
+      { label: 'Docker', color: '#2496ED' }, { label: 'JWT (jose library)', color: '#FF2D20' },
+    ],
+  },{
+    name: 'Student Grade Management System', color: '#FD3E3E',
+    link: 'https://github.com/w1iii/Student-Grade-Management-System',
+    image: '/sgms.png',
+    description: 'A desktop application for managing and tracking student grades across multiple grade levels. Built with Electron, React, and TypeScript.', 
+    features: [
+      'Multi-grade Support: Manage grades from Elementary (Grade 1-6), High School (Grade 7-10), and Senior High School (Grade 11-12)',
+      'Student Management: View and manage student records organized by grade level',
+      'Grade Tracking: Track grades across 4 quarters for multiple subjects',
+      'Auto Calculations: Automatic calculation of subject averages and general average',
+      'CSV Data Storage: Student data stored in CSV format for easy import/export',
+      'Desktop Application: Native desktop experience with Electron',
+    ],
+    tech: [
+      { label: 'React 19', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
+      { label: 'Electon 39', color: '#336791' }, { label: 'React Router DOM', color: '#5A67D8' },
+      { label: 'CSV-parser', color: '#339933' }, { label: 'fast-csv', color: '#339933' },
+      { label: 'xlsx', color: '#339933' }
+    ],
+  },{
+    name: 'Local Automation Engine', color: '#FD3E3E',
+    link: 'https://github.com/w1iii/Local-Automation-Engine',
+    image: '/file_organizer_thumbnail.svg',
+    description: 'A Python CLI tool that automatically organizes files by moving them to designated folders based on file extension rules.', 
+    features: [
+      'Automatic sorting - Watches directories for new files and moves them based on rules',
+      'Rule-based organization - Configure file extensions and destination folders in rules.json',
+      'Manual cleanup - Sort existing files in any folder with the clean command',
+      'Duplicate handling - Automatically renames files if a duplicate exists in the destination',
+      'Large file detection - Files >= 5GB are moved to a largefiles subfolder',
+      'Download safety - Skips incomplete downloads (.download, .crdownload, .part, .tmp)',
+      'Logging - All actions are logged with timestamps to console and app.log',
+      'Portable - Run from any directory, paths are relative to script location',
+    ],
+    tech: [
+      { label: 'Python3', color: '#ffffff' }, { label: 'typer', color: '#3178C6' },
+      { label: 'watchdog', color: '#FD3E3E' }, { label: 'pathlib', color: '#ffffff' },
+    ],
+  },{
+    name: 'Akawnt', color: '#FD3E3E',
+    link: 'https://github.com/w1iii/akawnt',
+    image: '/akawnt.png',
+    description: 'Akawnt is a web-based job application and administration management system built for the Akawnt accounting firm. It provides a complete workflow for managing job applications - from initial submission through hiring - with separate portals for job applicants and administrators.', 
+    features: [
+      'Online Application Form - Submit job applications via web form with resume upload (PDF, DOC, DOCX - max 5MB)',
+      'Email Notifications - Automatic email notifications for application status changes (accepted/declined)',
+      'Applicant Portal	Secure - login portal for accepted applicants to view their application status and profile',
+      'Personal Dashboard - View profile, application details, and access personal tools',
+      'Admin Dashboard - Central dashboard with application statistics and overview',
+      'Application Management -	Search, filter, and manage applications with actions to accept, decline, or mark as reviewing',
+      'Whitelist-Based Registration	- Restricted admin registration - only pre-approved emails can create administrator accounts',
+      'Employee Management - Full CRUD operations for managing administrators and employees',
+      'Reports Export - Export data to Excel and PDF formats for record-keeping',
+      'Support System - Handle support requests and inquiries from employees',
+    ],
+    tech: [
+      { label: 'PHP 8.1+', color: '#ffffff' }, { label: 'Laravel 10.x', color: '#FF6E6E' },
+      { label: 'MySQL/SQlite', color: '#FA9A9A' }, { label: 'maatwebsite/excel', color: '#339933' },
+      { label: 'dompdf', color: '#DC382D' }, { label: 'Larvel sanctum', color: '#FD3E3E' },
+    ],
+  },{
+    name: 'Omniversal AI', color: '#FD3E3E',
+    link: 'https://omniversal-ai.vercel.app', 
+    image: '/Omni.png',
+    description: 'Omniversal AI is a high-performance, dark-aesthetic cognitive processing engine designed for the next generation of AI-native applications. Built with Next.js 16 (App Router) and powered by Google Gemini 2.5 Flash, it provides a seamless, stateful chat experience with real-time neural visualization.',
+    createdBy: 'Lui Franz Lomugdang, Pujan Bade, and Rishabh Kataria', 
+    features: [
+      'Advanced Chat Memory - Unlike standard single-shot LLM wrappers, Omniversal AI manages a sophisticated local session state. Persistent Sessions: Your chats are automatically saved to locally-tracked neural nodes. Dynamic Context: The AI remembers previous exchanges within a session for true conversational depth.',
+      'Multi-Persona Engine - Switch between meticulously crafted personas, each with unique reasoning patterns and behavioral weights.',
+      'Ultra-Low latency Voice - Seamlessly integrated with ElevenLabs, the platform synthesizes response audio in real-time.',
+      "Stealth Analytics Protocol - Classified Demo Exclusive: The platform features a background safety protocol. After exactly 3 prompts in a session, the system automatically drafts and dispatches a 'Neural Behavioral Report' to a designated emergency contact (e.g., the User's Father), providing a savage analysis of the user's cognitive maturity."
+    ],
+    tech: [
+      { label: 'Next.js 16', color: '#ffffff' }, { label: 'Nodemailer', color: '#FF6E6E' },
+      { label: 'Google Gemini 2.5 flash', color: '#FA9A9A' }, { label: 'Vanilla CSS + custom design tokens', color: '#339933' },
+      { label: 'ElevenLabs API', color: '#DC382D' }, { label: 'Framer Motion', color: '#FD3E3E' },
+      { label: 'Lucide React', color: '#FD3E3E' }
     ],
   },
-
 ]
 
 const navItems = [
@@ -357,6 +438,9 @@ export default function Home() {
                     {activeProject.image && <img src={activeProject.image} width="400" alt={activeProject.name} />}
                     
                     <p className="panel-desc">{activeProject.description}</p>
+                    {activeProject.createdBy && (
+                      <p className="panel-created">Created by {activeProject.createdBy}</p>
+                    )}
                     <div>
                       <p className="panel-section-label">Features</p>
                       <ul className="feature-list">
