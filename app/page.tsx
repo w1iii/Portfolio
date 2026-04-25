@@ -245,6 +245,11 @@ const navItems = [
   { id: 'contact',  label: "Let's Work Together" },
 ]
 
+const socialLinks = [
+  { label: 'GitHub', link: 'https://github.com/w1iii' },
+  { label: 'LinkedIn', link: 'https://www.linkedin.com/in/lui-franz-lomugdang-785a85307/' },
+]
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about')
   const [openProject, setOpenProject] = useState<string | null>('Pivot')
@@ -362,8 +367,8 @@ export default function Home() {
           </p>
 
           <div className="card-socials">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon"><GithubIcon /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><LinkedinIcon /></a>
+            <a href="https://github.com/w1iii" target="_blank" rel="noopener noreferrer" className="social-icon"><GithubIcon /></a>
+            <a href="https://www.linkedin.com/in/lui-franz-lomugdang-785a85307/" target="_blank" rel="noopener noreferrer" className="social-icon"><LinkedinIcon /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><InstagramIcon /></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FacebookIcon /></a>
           </div>
@@ -391,9 +396,11 @@ export default function Home() {
 
           <section ref={setRef('about')} id="about" className={`scroll-animate ${scrollDirection === 'down' ? 'from-bottom' : 'from-top'} ${isLoaded ? 'page-load-2' : ''}`}>
             <p className="section-label">Who I Am</p>
-            <h2 className="about-heading">SOFTWARE<br /><span className="accent">DEVELOPER</span></h2>
+            <h2 className="about-heading">SOFTWARE DEVELOPER</h2>
+            <p className="about-subheading">Full-Stack Developer • University of St. LaSalle • BS Computer Science (Exp. 2027)</p>
+            <p className="about-sub">Building production applications since 2023</p>
             <p className="about-body">
-              I&apos;m a software developer passionate about building efficient, scalable, and
+              I'm a software developer passionate about building efficient, scalable, and
               user-focused applications. I enjoy solving real-world problems through clean code
               and continuous learning, with experience in backend development, databases, and
               modern development tools.
@@ -416,24 +423,25 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={`recent-win-section ${isLoaded ? 'page-load-4' : ''}`}>
-            <div className="win-badge">{recentWin.type.toUpperCase()} WIN</div>
-            <div className="win-content">
-              <div className="win-header">
-                <span className="win-event">{recentWin.event}</span>
-                <span className="win-date">{recentWin.date}</span>
-              </div>
-              <h2 className="win-title">{recentWin.title}</h2>
-              <p className="win-desc">{recentWin.description}</p>
-              <p className="win-award">★ {recentWin.award}</p>
-              <p className="win-creators">Built by {recentWin.builtBy}</p>
-              <a href={recentWin.link} target="_blank" className="win-link">View on Devpost →</a>
-            </div>
-          </section>
-
           <section ref={setRef('projects')} id="projects" className="scroll-animate">
             <p className="section-label">Work</p>
             <h2 className="section-title">RECENT PROJECTS</h2>
+            
+            <div className={`recent-win-section ${isLoaded ? 'page-load-4' : ''}`}>
+              <div className="win-badge">{recentWin.type.toUpperCase()} WIN</div>
+              <div className="win-content">
+                <div className="win-header">
+                  <span className="win-event">{recentWin.event}</span>
+                  <span className="win-date">{recentWin.date}</span>
+                </div>
+                <h2 className="win-title">{recentWin.title}</h2>
+                <p className="win-desc">{recentWin.description}</p>
+                <p className="win-award">★ {recentWin.award}</p>
+                <p className="win-creators">Built by {recentWin.builtBy}</p>
+                <a href={recentWin.link} target="_blank" className="win-link">View on Devpost →</a>
+              </div>
+            </div>
+            
             <p className="section-sub">
               These projects represent my continuous learning journey in software development.
               From building APIs to implementing authentication and containerization, each one
@@ -506,7 +514,8 @@ export default function Home() {
           <section ref={setRef('contact')} id="contact" className="scroll-animate" style={{ paddingBottom: 48 }}>
             <p className="section-label">Contact</p>
             <h2 className="section-title-form">LET&apos;S WORK <span style={{ color: '#FF6E6E' }}>TOGETHER</span></h2>
-            <form className="contact-form" style={{ marginTop: 32 }} onSubmit={handleSubmit}>
+            <a href="mailto:lomugdanglf.19@gmail.com" className="contact-email">lomugdanglf.19@gmail.com</a>
+            <form className="contact-form" style={{ marginTop: 24 }} onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Name</label>

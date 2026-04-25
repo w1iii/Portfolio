@@ -41,11 +41,11 @@ body {
   background: #ffffff;
   border-radius: 24px;
   width: 100%;
-  height:80%;
+  height:70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 18px 18px 26px;
+  padding: 14px 14px 0px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0,0,0,0.4);
@@ -58,7 +58,7 @@ body {
   position: relative;
   z-index: 1;
   width: 200px;
-  height: 230px;
+  height: 220px;
   border-radius: 16px;
   background: linear-gradient(135deg, #FD3E3E 0%, #FA9A9A 100%);
   display: flex;
@@ -79,7 +79,7 @@ body {
   text-align: center;
   line-height: 1.25;
   letter-spacing: -0.3px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 /* Flame badge */
@@ -94,8 +94,8 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(255,110,110,0.5);
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   flex-shrink: 0;
 }
 
@@ -126,7 +126,7 @@ body {
   font-weight: 600;
   text-align: center;
   line-height: 1.65;
-  padding: 0 6px;
+  padding: 0 4px;
 }
 
 /* Social icons */
@@ -136,7 +136,7 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 .social-icon {
   width: 20px;
@@ -231,6 +231,18 @@ body {
   letter-spacing: -0.3px;
 }
 
+.contact-email {
+  color: #FF6E6E;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-email:hover {
+  color: #FD3E3E;
+}
+
 .section-sub {
   color: #BEBEBE;
   font-size: 14px;
@@ -244,10 +256,12 @@ body {
   font-weight: 800;
   color: #ffffff;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   letter-spacing: -0.5px;
 }
 .about-heading .accent { color: #BEBEBE; }
+.about-subheading { color: #FF6E6E; font-size: 14px; font-weight: 500; margin-bottom: 4px; letter-spacing: 0.05em; }
+.about-sub { color: #888; font-size: 13px; margin-bottom: 20px; }
 .about-body { color: #BEBEBE; font-size: 15px; line-height: 1.75; max-width: 520px; }
 
 /* ── SKILLS ───────────────────────────────────────────────────────────────── */
