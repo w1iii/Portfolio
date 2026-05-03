@@ -235,7 +235,26 @@ const projects = [
       { label: 'ElevenLabs API', color: '#DC382D' }, { label: 'Framer Motion', color: '#FD3E3E' },
       { label: 'Lucide React', color: '#FD3E3E' }
     ],
+  },{
+    name: 'The Feynman', color: '#961818',
+    link: 'https://the-feynman.vercel.app', 
+    image: '/feyn.png',
+    description: "An AI-powered learning platform that implements the Feynman Technique — a proven method for deep understanding through simplified explanation. Named after Nobel Prize physicist Richard Feynman, who believed that if you can't explain something simply, you don't understand it well enough.",
+    features: [
+      'AI Coaching Loop — Cumulative, conversation-based tutoring that asks one question at a time, targeting your weakest understanding criteria',
+      '5-Criterion Grading — Evaluates explanations across: plain language, core mechanism, analogy/example, no gaps/filler, and child-friendly tone',
+      'Progressive Feedback — Passed criteria never drop; the AI builds on previous answers like a real tutor',
+      'Smart Session Cap — Sessions end when all criteria are met or after 20 questions max'
+    ],
+    tech: [
+      { label: 'Next.js 16', color: '#ffffff' }, { label: 'TypeScript 5 ', color: '#3178C6' },  
+      { label: 'Supabase', color: '#FA9A9A' }, { label: 'Vanilla CSS', color: '#339933' },
+      { label: 'Supabase Auth', color: '#DC382D' }, { label: 'Groq SDK', color: '#FD3E3E' },
+      { label: 'React 19, Tailwind CSS 4', color: '#336791' }
+       
+    ],
   },
+
 ]
 
 const navItems = [
