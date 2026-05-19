@@ -239,6 +239,7 @@ const projects = [
     name: 'The Feynman', color: '#961818',
     link: 'https://the-feynman.vercel.app', 
     image: '/feyn.png',
+    createdBy: 'Lui Franz Lomugdang, Pujan Bade, and Rishabh Kataria', 
     description: "An AI-powered learning platform that implements the Feynman Technique — a proven method for deep understanding through simplified explanation. Named after Nobel Prize physicist Richard Feynman, who believed that if you can't explain something simply, you don't understand it well enough.",
     features: [
       'AI Coaching Loop — Cumulative, conversation-based tutoring that asks one question at a time, targeting your weakest understanding criteria',
@@ -253,7 +254,28 @@ const projects = [
       { label: 'React 19, Tailwind CSS 4', color: '#336791' }
        
     ],
+  },{
+    name: 'Credipro', color: '#7d0e0e',
+    link: 'https://credipro-frontend-production.up.railway.app', 
+    image: '/credi.png',
+    description: "Credipro is a decentralized lending protocol that solves the 'Sybil default paradox' in Web3 uncollateralized lending. It connects institutional underwriters with retail borrowers through a privacy-preserving, zero-knowledge proof-based underwriting model built on Midnight Network's Kachina protocol.",
+    features: [
+      'Zero-Knowledge Proof of Creditworthiness',
+      'Cryptographic Identity Binding',
+      'Selective Identity Reveal with Oracle Consensus',
+      'Privacy-Preserving Underwriting',
+      'Sybil Attack Prevention',
+      'Institutional-Grade Privacy',
+    ],
+    tech: [
+      { label: 'React', color: '#ffffff' }, { label: 'Docker', color: '#3178C6' },  
+      { label: 'Express', color: '#FA9A9A' }, { label: 'Oracle', color: '#339933' },
+      { label: 'JWT auth', color: '#DC382D' }, { label: 'Railway', color: '#FD3E3E' },
+      { label: 'Compact', color: '#336791' }
+       
+    ],
   },
+
 
 ]
 
