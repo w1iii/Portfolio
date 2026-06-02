@@ -438,7 +438,7 @@ export default function Home() {
           <section ref={setRef('about')} id="about" className={`scroll-animate ${scrollDirection === 'down' ? 'from-bottom' : 'from-top'} ${isLoaded ? 'page-load-2' : ''}`}>
             <p className="section-label">Who I Am</p>
             <h2 className="about-heading">SOFTWARE DEVELOPER</h2>
-            <p className="about-subheading">Full-Stack Developer • University of St. LaSalle • BS Computer Science (Exp. 2027)</p>
+            <p className="about-subheading">Full-Stack Developer • University of St. Lasalle • BS Computer Science (Exp. 2027)</p>
             <p className="about-sub">Building production applications since 2023</p>
             <p className="about-body">
               I'm a software developer passionate about building efficient, scalable, and
