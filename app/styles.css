@@ -487,7 +487,9 @@ body {
   border-radius: 20px;
   padding: 24px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
+.project-panel img { max-width: 100%; height: auto; }
 .project-panel-empty {
   height: 100%;
   display: flex;

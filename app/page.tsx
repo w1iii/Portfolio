@@ -274,7 +274,26 @@ const projects = [
       { label: 'Compact', color: '#336791' }
        
     ],
+  },{
+    name: 'iSuggest', color: '#7d0e0e',
+    link: 'https://github.com/w1iii/iSuggest', 
+    image: '/iSuggest.png',
+    description: " A full-stack employee suggestion management system built with Laravel 13 + Vue 3.",
+    features: [
+      'Employees create, read, update, delete own suggestions',
+      'Kanban board with drag-drop between status columns',
+      'Laravel Sanctum SPA authentication',
+      'Download analytics PDF report',
+    ],
+    tech: [
+      { label: 'PHP 8.3', color: '#ffffff' }, { label: 'npm', color: '#3178C6' },  
+      { label: 'Composer', color: '#FA9A9A' }, { label: 'Vue.js', color: '#339933' },
+      { label: 'Node.js 20', color: '#DC382D' }, { label: 'Laravel Backend', color: '#FD3E3E' },
+      { label: 'MySQL 8+', color: '#336791' }
+       
+    ],
   },
+
 
 
 ]
