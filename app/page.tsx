@@ -72,7 +72,7 @@ const recentWin = {
 const projects = [
   {
     name: 'Pivot', color: '#FAC4C4',
-    link: 'https://github.com/w1iii/Pivot',
+    link: 'https://pivot-ydj5-egk772z72-w1iiis-projects.vercel.app',
     image: '/pivot.png',
     description: 'A personal stock tracking dashboard with AI-powered analysis. Built to help investors monitor their portfolios with real-time data and intelligent insights.',
     features: [
