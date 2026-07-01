@@ -413,7 +413,7 @@ export default function Home() {
 
           <div className="avatar-wrapper">
             <div className="avatar-pattern" />
-            <img src="/profile.jpg" width="140%" />
+            <img src="/profile.jpg" alt="Profile" className="avatar-img" />
           </div>
 
           <p className="card-name">Lui Franz A.<br />Lomugdang</p>
