@@ -71,22 +71,26 @@ const recentWin = {
 
 const projects = [
   {
-    name: 'Pivot', color: '#FAC4C4',
-    link: 'https://pivot-ydj5-egk772z72-w1iiis-projects.vercel.app',
-    image: '/pivot.png',
-    description: 'A personal stock tracking dashboard with AI-powered analysis. Built to help investors monitor their portfolios with real-time data and intelligent insights.',
+    name: 'Boards', color: '#E88888',
+    link: 'https://boards-tau-three.vercel.app',
+    image: '/boards.png',
+    description: 'An AI-powered practice exam platform for the Philippine Nursing Licensure Exam (NLE). Generates NLE-style situational questions with full rationales, tracks weak areas, and provides timed mock exam mode — built for nursing students and review centers.',
     features: [
-      'User Authentication — Secure signup and login with JWT-based authentication',
-      'Personal Watchlist — Create and manage your custom stock watchlist',
-      'Real-time Data — Track stock prices, changes, and market statistics',
-      'Interactive Charts — Visualize stock performance with dynamic price charts',
-      'AI Stock Analyst — AI-powered insights and analysis for any stock (powered by Groq)',
+      'AI Question Generation — NLE-style situational questions with rationale for every choice, not just the correct answer',
+      'Practice Mode — choose content areas (Med-Surg, Mother & Child, Psychiatric, Community Health, Leadership), difficulty, and 5–50 questions',
+      'Mock Exam Mode — timed, full-screen, results with pass/fail at the 75% mark',
+      'Progress Analytics — overall mastery score, per-area breakdown, weak-area alerts (<50%)',
+      'Adaptive Weak-Area Tracking — prioritizes your weakest content area after ~20 answered questions',
+      'Study Guides & Curriculum — downloadable guides, notes, and review materials with admin review queue',
+      'Subscription Payments — PayMongo checkout (GCash, Maya, cards, Billease)',
+      'Clerk Authentication — email/password, Google OAuth, org-ready',
     ],
     tech: [
-      { label: 'Next.js', color: '#ffffff' }, { label: 'React', color: '#61DAFB' },
-      { label: 'TypeScript', color: '#3178C6' }, { label: 'CSS', color: '#1572B6' },
-      { label: 'Redis', color: '#DC382D' }, { label: 'JWT', color: '#D63AFF' },
-      { label: 'Groq SDK', color: '#FF6E6E' }, { label: 'Docker', color: '#2496ED' },
+      { label: 'Next.js 16', color: '#ffffff' }, { label: 'React 19', color: '#61DAFB' },
+      { label: 'TypeScript', color: '#3178C6' }, { label: 'Tailwind CSS 4', color: '#38B2AC' },
+      { label: 'PostgreSQL', color: '#336791' }, { label: 'Neon', color: '#00E59B' },
+      { label: 'Clerk', color: '#6C47FF' }, { label: 'Groq SDK', color: '#FF6E6E' },
+      { label: 'PayMongo', color: '#00C7B7' }, { label: 'Zod', color: '#3E67B1' },
     ],
   },
   {
@@ -119,43 +123,6 @@ const projects = [
     tech: [
       { label: 'React', color: '#61DAFB' }, { label: 'Node.js', color: '#339933' },
       { label: 'Javascript', color: '#F7DF1E' } 
-    ],
-  },
-  {
-    name: 'Thrifty', color: '#C44444',
-    link: 'https://github.com/w1iii/thrifty',
-    image: '/thrifty.png',
-    description: 'A Tinder-style thrift shopping application that transforms the secondhand shopping experience into an engaging, swipe-based discovery platform. Built with a modern full-stack architecture.',
-    features: [
-      'Tinder-style card interface with drag gestures',
-      'Swipe right to save (like), left to skip (pass)',
-      'Protected routes with middleware verification',
-      'Touch and mouse support for swiping',
-    ],
-    tech: [
-      { label: 'Next.js', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
-      { label: 'Postgres', color: '#336791' }, { label: 'Prisma', color: '#5A67D8' },
-      { label: 'Docker', color: '#2496ED' }, { label: 'Laravel', color: '#FF2D20' },
-    ],
-  },{
-    name: 'DevTalk', color: '#B22222',
-    link: 'https://github.com/w1iii/Developer-Knowledge-Hub',
-    image: '/devtalk.png',
-    description: '  Stack Overflow-inspired Q&A platform for developers to learn, ask questions, and share knowledge.', 
-    features: [
-      'Authentication - JWT-based user registration and login with secure cookie handling',
-      'Questions - Post, edit, delete, and view developer questions',
-      'Tags - Categorize questions with technology tags (JavaScript, Python, React, etc.)',
-      'Voting System - Upvote/downvote questions and answers',
-      'Answers - Add, edit, and delete answers to questions',
-      'Search - Real-time search through questions',
-      'View Tracking - Track unique question views per user',
-      'Dashboard - Personalized dashboard for authenticated users',
-    ],
-    tech: [
-      { label: 'Next.js', color: '#ffffff' }, { label: 'TypeScript', color: '#3178C6' },
-      { label: 'Postgres', color: '#336791' }, { label: 'Next.js API routes', color: '#5A67D8' },
-      { label: 'Docker', color: '#2496ED' }, { label: 'JWT (jose library)', color: '#FF2D20' },
     ],
   },{
     name: 'Student Grade Management System', color: '#A01E1E',
@@ -312,7 +279,7 @@ const socialLinks = [
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about')
-  const [openProject, setOpenProject] = useState<string | null>('Pivot')
+  const [openProject, setOpenProject] = useState<string | null>('Campus Connect')
   const [isLoaded, setIsLoaded] = useState(false)
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down')
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
