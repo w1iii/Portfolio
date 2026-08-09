@@ -249,22 +249,46 @@ const projects = [
 
 const certifications = [
   {
-    title: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    year: 'Issued 2024',
-    description: 'Foundational cloud knowledge: AWS services, architecture, pricing, and security.',
+    title: 'Working with Hugging Face',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'Load, use, and save models from the Hugging Face Hub; build text classification, summarization, and document Q&A pipelines.',
+    link: 'https://www.datacamp.com/statement-of-accomplishment/course/246c1affa199d3ff3466e322b3826efe6dfde158',
   },
   {
-    title: 'Meta Front-End Developer Professional Certificate',
-    issuer: 'Meta',
-    year: 'Issued 2023',
-    description: 'Modern front-end development: React, responsive UI, and version control.',
+    title: 'Prompt Engineering with the OpenAI API',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'Craft effective prompts, chain-of-thought strategies, and business-ready prompt workflows with the OpenAI API in Python.',
+    link: 'https://www.datacamp.com/statement-of-accomplishment/course/98d4b90e3c54e364bacc79dfd37ba6617cdeb1cc',
   },
   {
-    title: 'Google IT Automation with Python',
-    issuer: 'Google',
-    year: 'Issued 2023',
-    description: 'Python programming, Git, IT automation, and troubleshooting at scale.',
+    title: 'Working with the OpenAI API',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'Send requests to OpenAI models, prompt GPT for text generation, and build AI-powered chatbots with message history.',
+    link: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/4f19f532ff97dae10f6c20c33260423c55e8ee39',
+  },
+  {
+    title: 'Introduction to Shell',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'The Unix command line: manipulate files, combine tools with pipes, batch process, and write shell scripts.',
+    link: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/619a370b601cd2120eaca1688fdfb8603e651449',
+  },
+  {
+    title: 'Introduction to Object-Oriented Programming in Python',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'Classes, objects, inheritance, polymorphism, and custom exceptions — writing clean, maintainable Pythonic code.',
+    link: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/786cb55e8bcdcd777cf7134f7d89ea0f5f56282e',
+  },
+  {
+    title: 'Intermediate GitHub Concepts',
+    issuer: 'DataCamp',
+    year: 'Statement of Accomplishment',
+    description: 'GitHub Projects, automation with GitHub Actions, secure authentication, and managing InnerSource programs.',
+    link: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/2aeda1959121c054ffc06b63af9b7066e155be44',
   },
 ]
 
@@ -585,12 +609,20 @@ export default function Home() {
           <h2 className="font-headline-lg text-headline-lg text-text-primary mb-12">CERTIFICATIONS</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {certifications.map(c => (
-              <div key={c.title} className="bg-surface-charcoal border border-border-subtle rounded-xl p-6 flex flex-col hover:border-accent-electric transition-colors">
+              <a
+                key={c.title}
+                href={c.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-surface-charcoal border border-border-subtle rounded-xl p-6 flex flex-col hover:border-accent-electric transition-colors group"
+              >
                 <span className="material-symbols-outlined text-accent-electric mb-4 text-3xl">workspace_premium</span>
-                <h3 className="font-headline-md text-headline-md text-text-primary mb-2">{c.title}</h3>
+                <h3 className="font-headline-md text-headline-md text-text-primary mb-2 group-hover:text-accent-electric transition-colors">{c.title}</h3>
                 <p className="font-body-md text-body-md text-text-secondary mb-4">{c.description}</p>
-                <p className="font-label-mono text-label-mono text-text-muted mt-auto">{c.issuer} · {c.year}</p>
-              </div>
+                <span className="inline-flex items-center gap-1 font-label-mono text-label-mono text-accent-electric mt-auto">
+                  {c.issuer} · {c.year} <span className="material-symbols-outlined text-xs">open_in_new</span>
+                </span>
+              </a>
             ))}
           </div>
         </section>
