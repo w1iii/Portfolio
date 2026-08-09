@@ -1,1 +1,158 @@
-@import './styles.css';
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── THEME TOKENS ──────────────────────────────────────────────────────────── */
+:root {
+  --on-tertiary: 80 36 0;
+  --secondary-container: 136 29 36;
+  --error: 255 180 171;
+  --text-primary: 24 24 27;
+  --inverse-surface: 225 226 236;
+  --on-secondary: 103 2 17;
+  --inverse-primary: 0 90 194;
+  --surface-elevated: 238 240 244;
+  --on-primary: 0 46 106;
+  --surface-container-low: 242 244 247;
+  --tertiary: 180 83 9;
+  --background-deep: 255 255 255;
+  --primary-fixed: 216 226 255;
+  --background: 247 248 250;
+  --surface-variant: 225 228 234;
+  --accent-electric: 37 99 235;
+  --primary: 0 90 194;
+  --on-primary-container: 0 40 93;
+  --surface-charcoal: 255 255 255;
+  --tertiary-fixed: 255 220 198;
+  --border-subtle: 226 229 233;
+  --outline-variant: 210 214 222;
+  --secondary: 176 32 40;
+  --tertiary-fixed-dim: 255 183 134;
+  --primary-fixed-dim: 173 198 255;
+  --surface-container-high: 230 233 238;
+  --primary-container: 77 142 255;
+  --error-container: 147 0 10;
+  --outline: 140 144 159;
+  --surface-container-lowest: 255 255 255;
+  --on-surface-variant: 68 72 82;
+  --surface-container-highest: 221 225 232;
+  --surface-bright: 255 255 255;
+  --on-error: 105 0 5;
+  --surface-tint: 0 90 194;
+  --inverse-on-surface: 46 48 56;
+  --surface-container: 238 240 244;
+  --on-secondary-container: 136 29 36;
+  --text-muted: 161 161 170;
+  --surface-dim: 216 219 224;
+  --surface: 247 248 250;
+  --text-secondary: 82 82 91;
+  --tertiary-container: 255 183 134;
+  --on-surface: 24 24 27;
+  --accent-coral: 220 38 38;
+  --on-background: 24 24 27;
+}
+
+.dark {
+  --on-tertiary: 80 36 0;
+  --secondary-container: 136 29 36;
+  --error: 255 180 171;
+  --text-primary: 244 244 245;
+  --inverse-surface: 225 226 236;
+  --on-secondary: 103 2 17;
+  --inverse-primary: 0 90 194;
+  --surface-elevated: 33 33 36;
+  --on-primary: 0 46 106;
+  --surface-container-low: 25 27 35;
+  --tertiary: 255 183 134;
+  --background-deep: 10 10 11;
+  --primary-fixed: 216 226 255;
+  --background: 16 19 26;
+  --surface-variant: 50 53 60;
+  --accent-electric: 59 130 246;
+  --primary: 173 198 255;
+  --on-primary-container: 0 40 93;
+  --surface-charcoal: 23 23 25;
+  --tertiary-fixed: 255 220 198;
+  --border-subtle: 46 46 50;
+  --outline-variant: 66 71 84;
+  --secondary: 255 179 176;
+  --tertiary-fixed-dim: 255 183 134;
+  --primary-fixed-dim: 173 198 255;
+  --surface-container-high: 39 42 49;
+  --primary-container: 77 142 255;
+  --error-container: 147 0 10;
+  --outline: 140 144 159;
+  --surface-container-lowest: 11 14 21;
+  --on-surface-variant: 194 198 214;
+  --surface-container-highest: 50 53 60;
+  --surface-bright: 54 57 65;
+  --on-error: 105 0 5;
+  --surface-tint: 173 198 255;
+  --inverse-on-surface: 46 48 56;
+  --surface-container: 29 32 39;
+  --on-secondary-container: 255 153 150;
+  --text-muted: 82 82 91;
+  --surface-dim: 16 19 26;
+  --surface: 16 19 26;
+  --text-secondary: 161 161 170;
+  --tertiary-container: 223 116 18;
+  --on-surface: 225 226 236;
+  --accent-coral: 248 113 113;
+  --on-background: 225 226 236;
+}
+
+/* ── BASE ──────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--background-deep));
+  color: rgb(var(--on-background));
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: rgb(var(--accent-electric));
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border-subtle));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ambient-shadow {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
