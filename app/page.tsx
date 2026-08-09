@@ -327,7 +327,7 @@ export default function Home() {
 
   useEffect(() => {
     if (index > maxIndex) setIndex(Math.max(0, maxIndex))
-  }, [maxIndex])
+  }, [index, maxIndex])
 
   useEffect(() => {
     if (paused) return
@@ -591,7 +591,7 @@ export default function Home() {
             </button>
 
             <div className="flex justify-center gap-2 mt-6">
-              {projects.map((_, i) => (
+              {Array.from({ length: maxIndex + 1 }).map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setIndex(i)}
