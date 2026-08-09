@@ -157,7 +157,7 @@ const projects = [
     ],
   },{
     name: 'The Chef', color: '#FF6E6E',
-    link: 'https://github.com/w1iii/TheChef',
+    link: 'https://the-chef-etgdhqwpf-w1iiis-projects.vercel.app',
     image: '/thechef.png',
     description: 'An AI-powered recipe and meal planning app. Tell it what ingredients you have, and it generates recipes, nutritional info, and a full weekly meal plan.',
     features: [
@@ -230,7 +230,7 @@ const projects = [
     ],
   },{
     name: 'Campus Connect', color: '#FF6E6E',
-    link: 'https://github.com/w1iii/campusconnect',
+    link: 'https://campusconnectbcd.onrender.com',
     image: '/campusconnect.png',
     description: 'A campus community platform connecting students, faculty, and staff. Enables real-time communication, event discovery, and resource sharing across departments.',
     features: [
