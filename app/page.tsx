@@ -170,26 +170,6 @@ const projects = [
       { label: 'Javascript', color: '#F7DF1E' } 
     ],
   },{
-    name: 'Credipro', color: '#FF6E6E',
-    link: 'https://credipro-frontend-production.up.railway.app', 
-    image: '/credi.png',
-    description: "Credipro is a decentralized lending protocol that solves the 'Sybil default paradox' in Web3 uncollateralized lending. It connects institutional underwriters with retail borrowers through a privacy-preserving, zero-knowledge proof-based underwriting model built on Midnight Network's Kachina protocol.",
-    createdBy: 'Lui Franz Lomugdang, Pujan Bade, and Rishabh Kataria', 
-    features: [
-      'Zero-Knowledge Proof of Creditworthiness',
-      'Cryptographic Identity Binding',
-      'Selective Identity Reveal with Oracle Consensus',
-      'Privacy-Preserving Underwriting',
-      'Sybil Attack Prevention',
-      'Institutional-Grade Privacy',
-    ],
-    tech: [
-      { label: 'React', color: '#ffffff' }, { label: 'Docker', color: '#3178C6' },  
-      { label: 'Express', color: '#FA9A9A' }, { label: 'Oracle', color: '#339933' },
-      { label: 'JWT auth', color: '#DC382D' }, { label: 'Railway', color: '#FD3E3E' },
-      { label: 'Compact', color: '#336791' }
-    ],
-  },{
     name: 'Akawnt', color: '#FF6E6E',
     link: 'https://github.com/w1iii/akawnt',
     image: '/akawnt.png',
