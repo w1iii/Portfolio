@@ -61,6 +61,25 @@ const recentWin = {
 
 const projects = [
   {
+    name: 'Taekwondo Manager', color: '#FF6E6E',
+    link: 'https://taekwondo-manager-sooty.vercel.app',
+    image: '/taek.png',
+    description: 'A tournament management platform for World Taekwondo events. It streamlines coach registration, athlete rosters, event enrollment, payment submissions, and bracket generation in one production-ready workflow.',
+    features: [
+      'Coach registration and athlete roster management',
+      'Event enrollment and payment submission workflows',
+      'Organizer dashboards for events, chapters, payments, and analytics',
+      'Bracket generation with PDF export',
+      'Role-based access for coaches and organizers',
+    ],
+    tech: [
+      { label: 'Next.js 16', color: '#ffffff' }, { label: 'React 19', color: '#61DAFB' },
+      { label: 'TypeScript', color: '#3178C6' }, { label: 'PostgreSQL', color: '#336791' },
+      { label: 'Prisma 7', color: '#2D3748' }, { label: 'Clerk', color: '#6C47FF' },
+      { label: 'Cloudinary', color: '#F9AB00' }, { label: 'Tailwind CSS 4', color: '#38B2AC' },
+    ],
+  },
+  {
     name: 'Boards', color: '#FF6E6E',
     link: 'https://boards-tau-three.vercel.app',
     image: '/boards.png',

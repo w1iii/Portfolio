@@ -1,102 +1,142 @@
 # LUI FRANZ A. LOMUGDANG
-## Full-Stack Developer
+## Full-Stack Developer / Software Engineer
 
----
-
-**Email:** lomugdanglf.19@gmail.com  
-**LinkedIn:** linkedin.com/in/lui-franz-lomugdang-785a85307  
-**GitHub:** github.com/w1iii
-
----
-
-## Education
-
-**University of St. LaSalle**  
-Bachelor of Science in Computer Science  
-Expected Graduation: 2027
+Email: lomugdanglf.19@gmail.com  
+LinkedIn: linkedin.com/in/lui-franz-lomugdang-785a85307  
+GitHub: github.com/w1iii  
+Portfolio: https://portfolio-2-orpin-phi.vercel.app/
 
 ---
 
 ## Profile
 
-> Full-stack developer with 2+ years of hands-on experience building production applications. Specialized in modern web technologies, AI integration, and real-time systems. Recognized for innovative solutions with MLH Best Use of ElevenLabs award at AI Hackfest 2026.
+Full-stack developer with 2+ years of hands-on experience building modern web applications, AI-powered products, and scalable backend systems. Skilled in Next.js, React, TypeScript, Node.js, Python, PHP/Laravel, and database-driven application design. Strong interest in product development, workflow automation, and AI-enhanced user experiences. Recognized for building practical, user-focused solutions and earning the MLH Best Use of ElevenLabs award at AI Hackfest 2026.
+
+---
+
+## Education
+
+Bachelor of Science in Computer Science  
+University of St. LaSalle  
+Expected Graduation: 2027
 
 ---
 
 ## Technical Skills
 
-| Category | Skills |
-|----------|--------|
-| **Languages** | JavaScript, TypeScript, Python, PHP, C++, C# |
-| **Frontend** | React, Next.js, Framer Motion, Tailwind CSS |
-| **Backend** | Node.js, Express, Django, Flask, Laravel |
-| **Databases** | PostgreSQL, MySQL, MongoDB, Redis |
-| **Tools & Platform** | Docker, Git, GitHub Actions, Vercel, Render |
-| **APIs & AI** | Google Gemini API, ElevenLabs, Socket.io |
+### Languages
+JavaScript, TypeScript, Python, PHP, C++, C#, SQL
+
+### Frontend
+React, Next.js, Tailwind CSS, Framer Motion, Vite, HTML, CSS
+
+### Backend & APIs
+Node.js, Express, Django, Flask, Laravel, REST APIs, JWT Authentication
+
+### Databases & Storage
+PostgreSQL, MySQL, MongoDB, Redis, Neon, Supabase
+
+### Tools & Platforms
+Docker, Git, GitHub Actions, Linux, Bash, Vercel, Render, Firebase-style deployment workflows
+
+### AI / Integrations
+Google Gemini API, Groq SDK, ElevenLabs API, OpenAI API workflows, Socket.io
 
 ---
 
-## Professional Experience
+## Selected Experience
 
-### Omniversal AI — Co-Developer
-**AI Hackfest | April 2026**  
-★ Award: **MLH Best Use of ElevenLabs**
+### Co-Developer — Omniversal AI
+AI Hackfest 2026  
+Award: MLH Best Use of ElevenLabs
 
-- Built a high-performance cognitive processing engine with Next.js 16 and Gemini 2.5 Flash
-- Implemented real-time voice synthesis using ElevenLabs API
-- Developed multi-persona AI chat system with persistent session memory
-- Collaborated with 2 team members to deliver complete product within hackathon deadline
+- Built a full-stack AI application using Next.js 16 and Google Gemini 2.5 Flash.
+- Integrated real-time voice synthesis with ElevenLabs for interactive AI conversations.
+- Designed a multi-persona chat system with persistent session memory and personalized behaviors.
+- Collaborated with teammates to deliver the product within a hackathon timeline.
 
-### Pivot — Lead Developer
-**Personal Project | 2024 - Present**
+### Lead Developer — Boards
+Personal Project / Product Concept
 
-- Created personal stock tracking dashboard with AI-powered analysis
-- Implemented JWT authentication and Redis caching for real-time data
-- Integrated Groq SDK for AI-driven stock insights
-- Deployed with Docker containerization
+- Developed an AI-powered Philippine Nursing Licensure Exam practice platform.
+- Implemented question generation, adaptive weak-area tracking, timed mock exams, and progress analytics.
+- Integrated Clerk authentication, PayMongo subscriptions, and PostgreSQL with Neon.
+- Built a scalable experience for study review, subscription access, and admin content oversight.
 
-### Campus Connect — Full-Stack Developer
-**Academic Project | 2024**
+### Full-Stack Developer — Taekwondo
+Personal Project
 
-- Built campus community platform with 500+ active users
-- Implemented real-time messaging using Socket.io
-- Designed MongoDB schema for efficient partner matching algorithm
-- Developed RESTful API endpoints with Express and JWT
+- Built a tournament management platform for World Taekwondo (WT) events.
+- Implemented coach registration, athlete rosters, event enrollment, payment submission, and bracket generation workflows.
+- Added role-based coach and organizer dashboards with Clerk authentication and public metadata roles.
+- Built bracket PDF export, Cloudinary uploads, analytics, rate limiting, and database-backed caching for production workflows.
 
-### DevTalk — Lead Developer
-**Personal Project | 2024**
+Repository: https://github.com/w1iii/taekwondo-manager  
+Live Demo: https://taekwondo-manager-sooty.vercel.app
 
-- Stack Overflow-inspired Q&A platform with full CRUD operations
-- Implemented voting system, user authentication, and search functionality
-- Built with Next.js, TypeScript, and PostgreSQL
-- Containerized with Docker for easy deployment
+### Lead Developer — The Feynman
+Personal Project
+
+- Built an AI-powered learning platform based on the Feynman Technique for deeper conceptual understanding.
+- Implemented a cumulative coaching loop that asks targeted questions and focuses on the learner's weakest criteria.
+- Created a five-criterion grading system covering plain language, core mechanisms, analogies, completeness, and child-friendly explanations.
+- Added progressive feedback and session limits to provide structured, focused learning experiences.
 
 ---
 
-## Projects
+## Notable Projects
 
-| Project | Tech Stack | Description |
-|---------|------------|--------------|
-| **Omniversal AI** | Next.js 16, Gemini 2.5, ElevenLabs | AI cognitive engine with voice synthesis |
-| **Pivot** | Next.js, React, Redis, Docker | Stock portfolio tracker with AI analysis |
-| **Campus Connect** | React, Node.js, MongoDB, Socket.io | Real-time campus messaging platform |
-| **The Chef** | React, Node.js, Groq | AI recipe and meal planning app |
-| **Thrifty** | Next.js, TypeScript, PostgreSQL | Tinder-style thrift shopping app |
-| **DevTalk** | Next.js, TypeScript, Docker | Q&A platform with voting system |
-| **Student Grade Management** | React 19, Electron | Desktop grade tracking application |
-| **Local Automation Engine** | Python 3, Typer | CLI file organization tool |
-| **Akawnt** | PHP, Laravel, MySQL | Job application management system |
+### Boards
+AI-powered exam platform for nursing students. Features include AI-generated review questions, rationales, area-based performance tracking, mock exams, and subscription-based access.
+
+Tech Stack: Next.js 16, React, TypeScript, Tailwind CSS, PostgreSQL, Neon, Clerk, Groq SDK, PayMongo
+
+### The Feynman
+AI learning platform based on the Feynman Technique for deeper conceptual understanding through guided explanations and iterative feedback.
+
+Tech Stack: Next.js 16, TypeScript, Supabase, Groq, React, Tailwind CSS
+
+### Taekwondo
+Tournament management platform for World Taekwondo events, supporting coach registration, athlete rosters, payments, event enrollment, and bracket generation.
+
+Tech Stack: Next.js 16, React 19, TypeScript, PostgreSQL, Prisma 7, Neon, Clerk, Cloudinary, Tailwind CSS 4, Vitest, Playwright, GitHub Actions, Vercel
+
+### Local Automation Engine
+Python-based file organization tool that watches folders, sorts files by extension, handles duplicate files, and keeps logs for safer file management.
+
+Tech Stack: Python 3, Typer, Watchdog, pathlib
+
+### Student Grade Management System
+Desktop application for managing student records, grade computation, CSV-based storage, and academic period tracking.
+
+Tech Stack: React 19, TypeScript, Electron, xlsx, fast-csv
+
+### Akawnt
+Job application management system for an accounting firm with applicant tracking, admin dashboards, email notifications, and reporting tools.
+
+Tech Stack: PHP, Laravel, MySQL, Dompdf, maatwebsite/excel
+
+---
+
+## Certifications
+
+- Working with Hugging Face — DataCamp
+- Prompt Engineering with the OpenAI API — DataCamp
+- Working with the OpenAI API — DataCamp
+- Introduction to Shell — DataCamp
+- Introduction to Object-Oriented Programming in Python — DataCamp
+- Intermediate GitHub Concepts — DataCamp
 
 ---
 
 ## Achievements
 
-- **MLH Best Use of ElevenLabs** — AI Hackfest 2026
-- **First Place** — [Add other hackathon wins if applicable]
+- MLH Best Use of ElevenLabs — AI Hackfest 2026
+- Built and deployed multiple functional full-stack products from concept to live application
+- Consistently learning and applying modern AI, cloud, and software engineering practices
 
 ---
 
-## Links
+## Additional Information
 
-**Portfolio:** (See web portfolio)  
-**Live Demo:** omniversal-ai.vercel.app
+Open to opportunities in software engineering, full-stack development, product engineering, and AI-powered application development. Interested in building practical, high-impact digital products that combine great UX, clean architecture, and measurable business value.
