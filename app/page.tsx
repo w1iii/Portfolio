@@ -61,6 +61,25 @@ const recentWin = {
 
 const projects = [
   {
+    name: 'VAMOS After Dark', color: '#FF6E6E',
+    link: 'https://www.vamos-afterdark.live',
+    image: '/vamos.jpg',
+    description: 'Event site for VAMOS After Dark (Oct 31, 2026) with VIP table reservations. Hero slideshow, package pages, and a reservation flow backed by server-side API routes and Neon Postgres.',
+    features: [
+      'Hero slideshow with separate desktop and mobile image sets',
+      'VIP ECLIPSE and VIP PRESTIGE package pages with pricing, inclusions, and bottle choices',
+      'Reservation form with validation, submitted through a Next.js API route',
+      'Neon Postgres storage with schema checks on package key and amount',
+      'CSV migration script for importing existing Google Sheet reservations',
+      'Vercel Analytics tracking',
+    ],
+    tech: [
+      { label: 'Next.js 16', color: '#ffffff' }, { label: 'React 19', color: '#61DAFB' },
+      { label: 'TypeScript', color: '#3178C6' }, { label: 'Tailwind CSS 4', color: '#38B2AC' },
+      { label: 'Neon Postgres', color: '#00E59B' }, { label: 'Vercel Analytics', color: '#FD3E3E' },
+    ],
+  },
+  {
     name: 'Taekwondo Manager', color: '#FF6E6E',
     link: 'https://taekwondo-manager-sooty.vercel.app',
     image: '/taek.png',
